@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Lethbridge Solar</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'GA_MEASUREMENT_ID');
+// Fire conversion on this page load (alternative to JS submit tracking)
+gtag('event', 'generate_lead', { currency: 'CAD', source: 'thank_you_page' });
+</script>
+<style>
+  :root { --sky:#1565C0; --sun:#FFB300; --dark:#0A2744; --font-display:'Bebas Neue',sans-serif; --font-body:'DM Sans',sans-serif; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: linear-gradient(180deg,#061E3C 0%,#1565C0 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; -webkit-font-smoothing: antialiased; }
+  .card { background: white; border-radius: 24px; padding: 56px 48px; max-width: 520px; width: 100%; text-align: center; }
+  .icon { font-size: 56px; margin-bottom: 20px; }
+  h1 { font-family: var(--font-display); font-size: 48px; color: var(--dark); margin-bottom: 16px; }
+  p { font-size: 16px; color: #395674; line-height: 1.7; margin-bottom: 12px; }
+  .highlight { background: #E3F2FD; border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+  .highlight p { margin: 0; color: var(--sky); font-weight: 500; font-size: 15px; }
+  a.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none; background: var(--sky); color: white; margin-top: 8px; }
+  a.home { color: var(--sky); font-size: 14px; display: block; margin-top: 20px; }
+  .sun { font-family: var(--font-display); font-size: 14px; letter-spacing: .08em; color: var(--sun); margin-top: 32px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">☀️</div>
+    <h1>You're all set!</h1>
+    <p>We've received your estimate request and we'll call you within <strong>24 hours</strong> to discuss your custom solar proposal.</p>
+    <p>Check your email for a confirmation with our contact details — feel free to reach out anytime.</p>
+    <div class="highlight">
+      <p>📞 Can't wait? Call or text us directly:<br><strong>(403) 123-4567</strong></p>
+    </div>
+    <a href="tel:+14031234567" class="btn">Call us now</a>
+    <a href="index.html" class="home">← Back to lethbridgesolar.ca</a>
+    <div class="sun">LETHBRIDGE SOLAR</div>
+  </div>
+</body>
+</html>

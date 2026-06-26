@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lethbridge Solar — Southern Alberta's Solar Specialists</title>
+<meta name="description" content="Lethbridge Solar installs residential and commercial solar in Southern Alberta. We handle CEIP applications, permits, and grant paperwork — soup to nuts. Free quote.">
+<meta name="keywords" content="solar panels Lethbridge, solar installation Alberta, CEIP grant Alberta, residential solar Lethbridge, commercial solar Alberta, agricultural solar, net metering Alberta, solar grants Alberta 2026">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="CA-AB">
+<meta name="geo.placename" content="Lethbridge, Alberta">
+<meta property="og:title" content="Lethbridge Solar — We Handle Your Grants Too">
+<meta property="og:description" content="Solar for Lethbridge homes, businesses, and farms. We manage CEIP financing, permits, and all the paperwork — not just the panels.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lethbridgesolar.ca">
+<meta property="og:locale" content="en_CA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','GA_MEASUREMENT_ID');
+  function track(n,p){gtag('event',n,p||{});}
+</script>
+
+<style>
+/* ── TOKENS ─────────────────────────────────────── */
+:root{
+  --sky:#0A2744;
+  --sky2:#1565C0;
+  --sun:#FFB300;
+  --sun2:#FF8F00;
+  --grass:#1B5E20;
+  --off-white:#F7F6F2;
+  --border:#DDD8CE;
+  --dark:#0D0D0D;
+  --mid:#444;
+  --soft:#888;
+  --green-bg:#E8F5E9;
+  --green:#1B5E20;
+  --amber-bg:#FFF8E1;
+  --amber:#E65100;
+  --blue-bg:#E3F2FD;
+  --r:12px;
+  --r-sm:8px;
+  --r-lg:20px;
+  --shadow:0 2px 16px rgba(0,0,0,.08);
+  --shadow-lg:0 8px 40px rgba(0,0,0,.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--dark);overflow-x:hidden;}
+
+/* ── UTILS ─────────────────────────────────────── */
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+
+/* ── BUTTONS ────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:50px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;cursor:pointer;border:none;text-decoration:none;transition:all .2s;}
+.btn-sun{background:var(--sun);color:var(--sky);box-shadow:0 4px 16px rgba(255,179,0,.4);}
+.btn-sun:hover{background:var(--sun2);transform:translateY(-1px);box-shadow:0 6px 24px rgba(255,179,0,.5);}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+.btn-dark{background:var(--sky);color:#fff;}
+.btn-dark:hover{background:#0d3a70;transform:translateY(-1px);}
+
+/* ── NAV ────────────────────────────────────────── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .3s;padding:20px 0;}
+#nav.scrolled{background:rgba(10,39,68,.97);backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 2px 24px rgba(0,0,0,.3);}
+.nav-inner{display:flex;align-items:center;gap:32px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;}
+.nav-logo svg{width:40px;height:40px;flex-shrink:0;}
+.nav-wordmark{display:flex;flex-direction:column;line-height:1;font-family:'Bebas Neue',sans-serif;}
+.nav-wordmark span:first-child{font-size:18px;color:#fff;letter-spacing:.06em;}
+.nav-wordmark span:last-child{font-size:11px;color:var(--sun);letter-spacing:.18em;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav-cta{padding:10px 22px;font-size:14px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:all .3s;}
+
+/* ── HERO ────────────────────────────────────────── */
+#hero{min-height:100vh;background:linear-gradient(175deg,#050F1E 0%,#0A2744 45%,#1A3F6F 100%);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:120px 0 80px;}
+.hero-sky{position:absolute;inset:0;pointer-events:none;}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle 3s infinite alternate;}
+@keyframes twinkle{0%{opacity:.3;}100%{opacity:.9;}}
+.cloud{position:absolute;background:rgba(255,255,255,.07);border-radius:50px;filter:blur(20px);}
+.sun-glow{position:absolute;top:80px;right:10%;width:260px;height:260px;background:radial-gradient(circle,rgba(255,179,0,.3) 0%,transparent 70%);border-radius:50%;}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 440px;gap:60px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,179,0,.15);border:1px solid rgba(255,179,0,.3);border-radius:50px;padding:6px 14px;font-size:12px;color:var(--sun);font-weight:600;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase;}
+.hero-badge .dot{width:6px;height:6px;background:var(--sun);border-radius:50%;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.7);}}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,7vw,88px);line-height:.95;color:#fff;letter-spacing:.01em;margin-bottom:20px;}
+.hero h1 em{font-style:normal;color:var(--sun);}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.7);line-height:1.6;max-width:520px;margin-bottom:32px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border-radius:var(--r);overflow:hidden;margin-top:40px;}
+.stat-box{background:rgba(255,255,255,.05);padding:16px 20px;text-align:center;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--sun);letter-spacing:.02em;}
+.stat-l{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em;margin-top:2px;}
+
+/* ── HERO CARD ──────────────────────────────────── */
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:28px;backdrop-filter:blur(12px);}
+.hc-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-bottom:16px;}
+.hc-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.hc-row:last-of-type{border-bottom:none;}
+.hc-name{font-size:13px;color:rgba(255,255,255,.75);}
+.hc-val{font-size:14px;font-weight:600;color:#fff;}
+.hc-val.green{color:#69F0AE;}
+.hc-val.amber{color:var(--sun);}
+.hc-divider{height:1px;background:rgba(255,255,255,.1);margin:12px 0;}
+.hc-total-row{display:flex;justify-content:space-between;align-items:center;margin-top:4px;}
+.hc-total-label{font-size:12px;color:rgba(255,255,255,.5);}
+.hc-total{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--sun);letter-spacing:.02em;}
+.hc-note{font-size:11px;color:rgba(255,255,255,.4);margin-top:12px;line-height:1.5;}
+
+/* ── TRUST BAR ──────────────────────────────────── */
+#trust{background:var(--off-white);border-bottom:1px solid var(--border);padding:16px 0;}
+.trust-inner{display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:center;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--mid);}
+.trust-icon{font-size:18px;}
+
+/* ── SECTIONS ───────────────────────────────────── */
+section{padding:96px 0;}
+.section-tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:600;color:var(--sky2);background:var(--blue-bg);padding:4px 12px;border-radius:50px;margin-bottom:16px;}
+.section-tag.amber{color:#B45309;background:#FFFBEB;}
+.section-tag.green{color:var(--green);background:var(--green-bg);}
+h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,5vw,58px);line-height:1.0;color:var(--dark);margin-bottom:16px;letter-spacing:.01em;}
+h2 em{font-style:normal;color:var(--sky2);}
+.section-intro{font-size:17px;color:var(--mid);line-height:1.65;max-width:600px;}
+
+/* ── GRANTS PROMISE BANNER ──────────────────────── */
+#grants-promise{background:linear-gradient(135deg,#0A2744 0%,#1565C0 100%);padding:72px 0;}
+.gp-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.gp-left h2{color:#fff;}
+.gp-left h2 em{color:var(--sun);}
+.gp-left p{font-size:16px;color:rgba(255,255,255,.75);line-height:1.7;margin-top:16px;}
+.promise-list{margin-top:28px;display:flex;flex-direction:column;gap:16px;}
+.promise-item{display:flex;gap:14px;align-items:flex-start;}
+.promise-icon{width:36px;height:36px;background:rgba(255,179,0,.15);border:1px solid rgba(255,179,0,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;margin-top:2px;}
+.promise-body{}
+.promise-title{font-size:15px;font-weight:600;color:#fff;}
+.promise-desc{font-size:13px;color:rgba(255,255,255,.6);margin-top:3px;line-height:1.5;}
+.gp-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:32px;backdrop-filter:blur(8px);}
+.gp-card-title{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--sun);letter-spacing:.04em;margin-bottom:20px;}
+.grant-pill{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-radius:var(--r-sm);margin-bottom:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.grant-pill.available{border-color:rgba(105,240,174,.3);background:rgba(105,240,174,.07);}
+.grant-pill.closed{opacity:.5;}
+.grant-name{font-size:13px;font-weight:500;color:#fff;}
+.grant-amt{font-size:12px;font-weight:700;color:#69F0AE;}
+.grant-pill.closed .grant-amt{color:rgba(255,255,255,.4);}
+.grant-status{font-size:10px;text-transform:uppercase;letter-spacing:.08em;padding:3px 8px;border-radius:50px;}
+.grant-status.open{background:rgba(105,240,174,.2);color:#69F0AE;}
+.grant-status.closed{background:rgba(255,255,255,.08);color:rgba(255,255,255,.3);}
+.grant-status.applies{background:rgba(255,179,0,.2);color:var(--sun);}
+
+/* ── RESIDENTIAL ────────────────────────────────── */
+#residential{background:#fff;}
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px;}
+.service-content{}
+.service-benefits{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
+.benefit{display:flex;gap:14px;align-items:flex-start;}
+.benefit-dot{width:8px;height:8px;background:var(--sun);border-radius:50%;flex-shrink:0;margin-top:7px;}
+.benefit-body{}
+.benefit-title{font-size:15px;font-weight:600;color:var(--dark);}
+.benefit-desc{font-size:13px;color:var(--soft);margin-top:2px;line-height:1.5;}
+.grants-box{background:var(--off-white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;}
+.grants-box-title{font-family:'DM Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--sky2);margin-bottom:20px;display:flex;align-items:center;gap:8px;}
+.grants-box-title::before{content:'';display:block;width:8px;height:8px;background:var(--sky2);border-radius:50%;}
+.grant-row{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);}
+.grant-row:last-child{border-bottom:none;}
+.grant-row-icon{width:32px;height:32px;background:var(--blue-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.grant-row-body{}
+.grant-row-name{font-size:14px;font-weight:600;color:var(--dark);}
+.grant-row-desc{font-size:12px;color:var(--soft);margin-top:2px;line-height:1.45;}
+.grant-row-tag{display:inline-block;margin-top:6px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:2px 8px;border-radius:50px;}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-blue{background:var(--blue-bg);color:var(--sky2);}
+.tag-grey{background:#F0F0F0;color:#888;}
+.grants-footer{margin-top:16px;padding:12px 16px;background:#E8F5E9;border-radius:var(--r-sm);border:1px solid #C8E6C9;}
+.grants-footer-text{font-size:12px;color:var(--green);font-weight:600;line-height:1.5;}
+
+/* ── COMMERCIAL ─────────────────────────────────── */
+#commercial{background:var(--off-white);}
+.commercial-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px;}
+.itc-highlight{background:linear-gradient(135deg,#0A2744,#1565C0);border-radius:var(--r-lg);padding:32px;color:#fff;margin-bottom:24px;}
+.itc-highlight-top{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.itc-badge{width:48px;height:48px;background:var(--sun);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--sky);flex-shrink:0;}
+.itc-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.04em;}
+.itc-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:2px;}
+.itc-desc{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:16px;}
+.itc-calc{background:rgba(255,255,255,.08);border-radius:var(--r-sm);padding:14px 16px;}
+.itc-calc-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:8px;}
+.itc-calc-row{display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.8);padding:4px 0;}
+.itc-calc-row.total{border-top:1px solid rgba(255,255,255,.15);margin-top:8px;padding-top:10px;font-weight:600;font-size:14px;color:#69F0AE;}
+.commercial-benefits{display:flex;flex-direction:column;gap:16px;}
+.comm-benefit{padding:18px;background:#fff;border:1px solid var(--border);border-radius:var(--r);transition:all .2s;}
+.comm-benefit:hover{border-color:var(--sky2);box-shadow:var(--shadow);}
+.comm-benefit-top{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+.comm-icon{width:36px;height:36px;background:var(--blue-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.comm-title{font-size:15px;font-weight:600;color:var(--dark);}
+.comm-desc{font-size:13px;color:var(--soft);line-height:1.5;}
+
+/* ── AGRICULTURAL ───────────────────────────────── */
+#agricultural{background:#fff;}
+.ag-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:48px;}
+.ag-card{background:var(--off-white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;transition:all .2s;}
+.ag-card:hover{border-color:var(--sky2);transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.ag-icon{font-size:32px;margin-bottom:16px;}
+.ag-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.03em;color:var(--dark);margin-bottom:10px;}
+.ag-desc{font-size:13px;color:var(--soft);line-height:1.6;}
+.ag-tag{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:4px 10px;border-radius:50px;background:var(--amber-bg);color:var(--amber);}
+
+/* ── HOW IT WORKS ───────────────────────────────── */
+#how-it-works{background:var(--off-white);}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:48px;position:relative;}
+.steps::after{content:'';position:absolute;top:28px;left:calc(10% + 14px);right:calc(10% + 14px);height:2px;background:linear-gradient(90deg,var(--sky2),var(--sun));z-index:0;}
+.step{text-align:center;position:relative;z-index:1;}
+.step-num{width:56px;height:56px;border-radius:50%;background:var(--sky);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:22px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid var(--off-white);}
+.step:nth-child(5) .step-num{background:var(--sun);color:var(--sky);}
+.step-title{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.step-desc{font-size:12px;color:var(--soft);line-height:1.5;padding:0 8px;}
+.step-highlight{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--sky2);margin-top:6px;}
+
+/* ── FINANCING ──────────────────────────────────── */
+#financing{background:#fff;}
+.fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.fin-card{border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;transition:all .2s;}
+.fin-card:hover{border-color:var(--sky2);box-shadow:var(--shadow);}
+.fin-card.featured{background:var(--sky);color:#fff;border-color:var(--sky);}
+.fin-icon{font-size:28px;margin-bottom:16px;}
+.fin-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.03em;margin-bottom:10px;}
+.fin-card.featured .fin-title{color:var(--sun);}
+.fin-amount{font-size:20px;font-weight:700;color:var(--sky2);margin-bottom:8px;}
+.fin-card.featured .fin-amount{color:#69F0AE;}
+.fin-desc{font-size:13px;color:var(--soft);line-height:1.6;}
+.fin-card.featured .fin-desc{color:rgba(255,255,255,.7);}
+.fin-features{margin-top:16px;display:flex;flex-direction:column;gap:8px;}
+.fin-feat{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mid);}
+.fin-card.featured .fin-feat{color:rgba(255,255,255,.8);}
+.fin-feat::before{content:'✓';font-weight:700;color:var(--sky2);}
+.fin-card.featured .fin-feat::before{color:var(--sun);}
+
+/* ── CALCULATOR ─────────────────────────────────── */
+#calculator{background:var(--off-white);}
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:48px;}
+.calc-controls{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:32px;}
+.calc-group{margin-bottom:24px;}
+.calc-label{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:10px;}
+.calc-val{font-family:'DM Mono',monospace;font-size:14px;color:var(--sky2);}
+input[type="range"]{width:100%;accent-color:var(--sky2);cursor:pointer;}
+.calc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.calc-opt{padding:8px 12px;border:2px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-weight:500;cursor:pointer;text-align:center;transition:all .2s;color:var(--mid);}
+.calc-opt.active{border-color:var(--sky2);background:var(--blue-bg);color:var(--sky2);}
+.calc-results{position:sticky;top:90px;}
+.results-card{background:var(--sky);color:#fff;border-radius:var(--r-lg);padding:32px;}
+.rc-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-bottom:20px;}
+.rc-big{font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--sun);letter-spacing:.02em;line-height:1;}
+.rc-big-label{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:24px;}
+.rc-rows{border-top:1px solid rgba(255,255,255,.15);padding-top:20px;}
+.rc-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.rc-row:last-child{border-bottom:none;}
+.rc-row-label{font-size:13px;color:rgba(255,255,255,.7);}
+.rc-row-val{font-size:14px;font-weight:600;color:#fff;}
+.rc-row-val.green{color:#69F0AE;}
+.rc-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:16px;line-height:1.5;}
+.ceip-callout{background:rgba(255,179,0,.1);border:1px solid rgba(255,179,0,.3);border-radius:var(--r-sm);padding:14px 16px;margin-top:16px;}
+.ceip-callout-text{font-size:12px;color:var(--sun);font-weight:500;line-height:1.5;}
+
+/* ── ABOUT ──────────────────────────────────────── */
+#about{background:#fff;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:48px;}
+.about-promises{margin-top:32px;display:flex;flex-direction:column;gap:14px;}
+.ap-item{display:flex;gap:14px;align-items:flex-start;}
+.ap-icon{width:32px;height:32px;background:var(--blue-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.ap-body{}
+.ap-title{font-size:14px;font-weight:700;color:var(--dark);}
+.ap-desc{font-size:13px;color:var(--soft);margin-top:2px;line-height:1.5;}
+.review-card{background:var(--off-white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;}
+.review-stars{color:var(--sun);font-size:18px;margin-bottom:12px;letter-spacing:2px;}
+.review-text{font-size:14px;color:var(--mid);line-height:1.7;font-style:italic;}
+.review-author{margin-top:16px;display:flex;align-items:center;gap:10px;}
+.review-avatar{width:36px;height:36px;background:var(--sky);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;}
+.review-meta{}
+.review-name{font-size:13px;font-weight:600;color:var(--dark);}
+.review-loc{font-size:11px;color:var(--soft);}
+
+/* ── QUOTE ──────────────────────────────────────── */
+#quote{background:linear-gradient(135deg,#050F1E,#0A2744);}
+.quote-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;padding:96px 0;}
+.quote-left h2{color:#fff;}
+.quote-left h2 em{color:var(--sun);}
+.quote-left p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.7;margin-top:16px;}
+.quote-reassurances{margin-top:28px;display:flex;flex-direction:column;gap:12px;}
+.qr-item{display:flex;gap:12px;align-items:center;font-size:14px;color:rgba(255,255,255,.75);}
+.qr-item::before{content:'✓';width:20px;height:20px;background:rgba(105,240,174,.15);border:1px solid rgba(105,240,174,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#69F0AE;flex-shrink:0;}
+.quote-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:32px;backdrop-filter:blur(12px);}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:12px;font-weight:600;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;font-size:14px;color:#fff;outline:none;transition:border-color .2s;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.3);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--sun);}
+.form-group select option{background:#0A2744;color:#fff;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-submit{width:100%;padding:15px;background:var(--sun);color:var(--sky);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;border:none;border-radius:50px;cursor:pointer;transition:all .2s;margin-top:8px;}
+.form-submit:hover{background:var(--sun2);transform:translateY(-1px);}
+.form-success{display:none;text-align:center;padding:40px 20px;}
+.form-success h3{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--sun);margin-bottom:12px;}
+.form-success p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.6;}
+.checkbox-group{display:flex;align-items:flex-start;gap:10px;margin-top:4px;}
+.checkbox-group input[type="checkbox"]{width:16px;height:16px;margin-top:2px;accent-color:var(--sun);flex-shrink:0;}
+.checkbox-group label{font-size:12px;color:rgba(255,255,255,.6);line-height:1.5;text-transform:none;letter-spacing:0;font-weight:400;}
+
+/* ── FOOTER ─────────────────────────────────────── */
+footer{background:#050F1E;padding:60px 0 32px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+.footer-brand{}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6;max-width:240px;}
+.footer-col h5{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:16px;}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:10px;transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3);}
+.footer-legal{display:flex;gap:24px;}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;}
+.footer-legal a:hover{color:rgba(255,255,255,.6);}
+
+/* ── FOUNDING OFFER ─────────────────────────────── */
+#founding{background:linear-gradient(135deg,#B45309,#D97706);padding:56px 0;}
+.founding-inner{display:flex;align-items:center;gap:40px;flex-wrap:wrap;}
+.founding-badge{background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:6px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#fff;flex-shrink:0;}
+.founding-text h3{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#fff;letter-spacing:.04em;}
+.founding-text p{font-size:14px;color:rgba(255,255,255,.8);margin-top:4px;}
+.founding-cta{margin-left:auto;}
+
+/* ── ANIMATIONS ─────────────────────────────────── */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* ── MOBILE NAV ─────────────────────────────────── */
+.mobile-menu{display:none;flex-direction:column;gap:4px;background:rgba(10,39,68,.98);padding:16px 24px;border-top:1px solid rgba(255,255,255,.1);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{color:rgba(255,255,255,.8);text-decoration:none;font-size:15px;font-weight:500;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media(max-width:900px){
+  .hero-inner,.service-grid,.commercial-grid,.about-grid,.calc-wrap,.quote-inner,.gp-inner{grid-template-columns:1fr;}
+  .hero-inner{text-align:center;}
+  .hero-ctas{justify-content:center;}
+  .hero-stats{margin-top:32px;}
+  .steps{grid-template-columns:1fr 1fr;gap:24px;}
+  .steps::after{display:none;}
+  .fin-grid,.ag-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .founding-inner{flex-direction:column;text-align:center;}
+  .founding-cta{margin-left:0;}
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:block;}
+  .commercial-grid .itc-highlight{order:-1;}
+}
+@media(max-width:600px){
+  .fin-grid,.ag-grid,.steps{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  h2{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ────────────────────────────────────────── -->
+<header>
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" onclick="track('logo_click')">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="21" fill="url(#lg1)" stroke="rgba(255,179,0,.3)" stroke-width="1"/>
+          <circle cx="22" cy="22" r="7" fill="#FFB300"/>
+          <g stroke="#FFB300" stroke-width="1.5" stroke-linecap="round">
+            <line x1="22" y1="9" x2="22" y2="12"/><line x1="22" y1="32" x2="22" y2="35"/>
+            <line x1="9" y1="22" x2="12" y2="22"/><line x1="32" y1="22" x2="35" y2="22"/>
+            <line x1="13.5" y1="13.5" x2="15.6" y2="15.6"/><line x1="28.4" y1="28.4" x2="30.5" y2="30.5"/>
+            <line x1="30.5" y1="13.5" x2="28.4" y2="15.6"/><line x1="15.6" y1="28.4" x2="13.5" y2="30.5"/>
+          </g>
+          <rect x="16" y="30" width="12" height="2" rx="1" fill="rgba(255,255,255,.3)"/>
+          <rect x="14" y="32" width="16" height="2" rx="1" fill="rgba(255,255,255,.2)"/>
+          <defs>
+            <linearGradient id="lg1" x1="22" y1="0" x2="22" y2="44" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0A2744"/><stop offset="100%" stop-color="#1565C0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="nav-wordmark"><span>LETHBRIDGE</span><span>SOLAR</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="#residential" onclick="track('nav_click',{link:'residential'})">Residential</a>
+        <a href="#commercial" onclick="track('nav_click',{link:'commercial'})">Commercial</a>
+        <a href="#agricultural" onclick="track('nav_click',{link:'agricultural'})">Agricultural</a>
+        <a href="#grants-promise" onclick="track('nav_click',{link:'grants'})">Grants &amp; Financing</a>
+        <a href="#about" onclick="track('nav_click',{link:'about'})">About</a>
+      </div>
+      <a href="#quote" class="btn btn-sun nav-cta" onclick="track('cta_click',{location:'nav'})">Free Quote</a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#residential" onclick="toggleMenu();track('nav_click',{link:'residential_mobile'})">Residential</a>
+    <a href="#commercial" onclick="toggleMenu();track('nav_click',{link:'commercial_mobile'})">Commercial</a>
+    <a href="#agricultural" onclick="toggleMenu();track('nav_click',{link:'agricultural_mobile'})">Agricultural</a>
+    <a href="#grants-promise" onclick="toggleMenu();track('nav_click',{link:'grants_mobile'})">Grants &amp; Financing</a>
+    <a href="#about" onclick="toggleMenu();track('nav_click',{link:'about_mobile'})">About</a>
+    <a href="#quote" onclick="toggleMenu();track('cta_click',{location:'mobile_menu'})" style="color:var(--sun);font-weight:700;">Free Quote →</a>
+  </div>
+</nav>
+</header>
+
+<!-- ── HERO ────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-sky" id="heroSky"></div>
+  <div class="sun-glow"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge"><span class="dot"></span>Lethbridge · Southern Alberta</div>
+        <h1>Cut Your<br>Power Bill.<br><em>We'll Handle</em><br>The Rest.</h1>
+        <p class="hero-sub">Solar installation, CEIP financing, grant applications, permits, and full post-install support — all done for you. Not just the panels.</p>
+        <div class="hero-ctas">
+          <a href="#quote" class="btn btn-sun" onclick="track('cta_click',{location:'hero_primary'})">Get My Free Quote</a>
+          <a href="#grants-promise" class="btn btn-outline" onclick="track('cta_click',{location:'hero_grants'})">See Available Grants</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box"><div class="stat-n">2,400+</div><div class="stat-l">Sun Hours/Year</div></div>
+          <div class="stat-box"><div class="stat-n">$0</div><div class="stat-l">Down w/ CEIP</div></div>
+          <div class="stat-box"><div class="stat-n">25yr</div><div class="stat-l">Panel Warranty</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card">
+          <div class="hc-label">Typical Lethbridge Home — 10 kW System</div>
+          <div class="hc-row"><span class="hc-name">System cost (before incentives)</span><span class="hc-val">$28,000</span></div>
+          <div class="hc-row"><span class="hc-name">CEIP financing (no upfront cost)</span><span class="hc-val green">— Covered</span></div>
+          <div class="hc-row"><span class="hc-name">Annual electricity savings</span><span class="hc-val green">$1,800/yr</span></div>
+          <div class="hc-row"><span class="hc-name">Net metering credits</span><span class="hc-val green">$300/yr</span></div>
+          <div class="hc-row"><span class="hc-name">Carbon credit income</span><span class="hc-val green">~$300/yr</span></div>
+          <div class="hc-divider"></div>
+          <div class="hc-total-row">
+            <div>
+              <div class="hc-total-label">25-Year Net Value</div>
+              <div class="hc-total">$43,200+</div>
+            </div>
+            <a href="#quote" class="btn btn-sun" style="font-size:13px;padding:10px 18px;" onclick="track('cta_click',{location:'hero_card'})">Get My Numbers →</a>
+          </div>
+          <div class="hc-note">Based on Lethbridge avg irradiance, ATCO rate escalation 3%/yr. Actual results vary by property.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ─────────────────────────────────── -->
+<div id="trust">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="trust-icon">🏠</span> Local Lethbridge team</div>
+      <div class="trust-item"><span class="trust-icon">📋</span> We handle CEIP applications</div>
+      <div class="trust-item"><span class="trust-icon">⚡</span> Licensed Alberta electricians</div>
+      <div class="trust-item"><a href="tel:+14033594809" style="color:inherit;text-decoration:none;" onclick="track('phone_click',{location:'trust_bar'})"><span class="trust-icon">📞</span> (403) 359-4809</a></div>
+      <div class="trust-item"><a href="mailto:hello@lethbridgesolar.ca" style="color:inherit;text-decoration:none;" onclick="track('email_click',{location:'trust_bar'})"><span class="trust-icon">✉️</span> hello@lethbridgesolar.ca</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── GRANTS PROMISE ─────────────────────────────── -->
+<section id="grants-promise">
+  <div class="container">
+    <div class="gp-inner">
+      <div class="gp-left fade-up">
+        <div class="section-tag amber">Grants &amp; Financing Support</div>
+        <h2>We Don't Hand You a Link.<br><em>We Walk You Through It.</em></h2>
+        <p>Alberta's grant programs are real — but they can be confusing. We've seen what happens when companies disappear after installation and leave customers scrambling through loan paperwork alone. That's not how we operate.</p>
+        <div class="promise-list">
+          <div class="promise-item">
+            <div class="promise-icon">📋</div>
+            <div class="promise-body">
+              <div class="promise-title">Grant &amp; CEIP Application Support</div>
+              <div class="promise-desc">We prepare and submit your CEIP property-tax financing application — and walk you through every other program you qualify for before installation starts.</div>
+            </div>
+          </div>
+          <div class="promise-item">
+            <div class="promise-icon">🔗</div>
+            <div class="promise-body">
+              <div class="promise-title">Utility &amp; Micro-gen Coordination</div>
+              <div class="promise-desc">Micro-generation agreements, net metering setup, and utility interconnection — we handle the paperwork so your credits start flowing from day one.</div>
+            </div>
+          </div>
+          <div class="promise-item">
+            <div class="promise-icon">📞</div>
+            <div class="promise-body">
+              <div class="promise-title">Post-Install Support — Always</div>
+              <div class="promise-desc">Your real support doesn't end when we finish the roof. We're available for monitoring questions, billing reviews, and service calls long after install.</div>
+            </div>
+          </div>
+          <div class="promise-item">
+            <div class="promise-icon">🇨🇦</div>
+            <div class="promise-body">
+              <div class="promise-title">Commercial Tax Credit Guidance</div>
+              <div class="promise-desc">Business owners get the full picture on Canada's 30% Clean Technology ITC, accelerated CCA deductions, and how to stack them correctly with CEIP.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gp-card fade-up">
+        <div class="gp-card-title">2026 ALBERTA GRANTS SNAPSHOT</div>
+
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:10px;">Residential Programs</div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">CEIP — Property Tax Financing</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">Lethbridge eligible · Up to $50,000 · 3–5% fixed</div>
+          </div>
+          <span class="grant-status open">Open</span>
+        </div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">Net Metering Credits</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">Up to 30¢/kWh in summer · Province-wide</div>
+          </div>
+          <span class="grant-status open">Open</span>
+        </div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">Alberta Carbon Credits</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">~$200–$400/year ongoing income</div>
+          </div>
+          <span class="grant-status open">Open</span>
+        </div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">SHARP — Senior Homeowners</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">Low-interest loan or grant · Age 65+</div>
+          </div>
+          <span class="grant-status open">Open</span>
+        </div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">CMHC Eco Improvement</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">25% mortgage insurance refund · CMHC mortgages</div>
+          </div>
+          <span class="grant-status applies">Check Eligibility</span>
+        </div>
+
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-top:20px;margin-bottom:10px;">Commercial / Agricultural</div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">Federal Clean Technology ITC</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">30% refundable tax credit · Corporations · 2034</div>
+          </div>
+          <span class="grant-status open">Open</span>
+        </div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">CCA Class 43.2 — Accelerated Write-off</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">100% capital cost deduction in Year 1</div>
+          </div>
+          <span class="grant-status open">Open</span>
+        </div>
+        <div class="grant-pill available">
+          <div>
+            <div class="grant-name">CEIP — Commercial</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">Property tax financing · Lethbridge eligible</div>
+          </div>
+          <span class="grant-status open">Open</span>
+        </div>
+
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-top:20px;margin-bottom:10px;">Closed Programs (for reference)</div>
+        <div class="grant-pill closed">
+          <div>
+            <div class="grant-name">Canada Greener Homes Grant</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.3);margin-top:2px;">Closed February 2024</div>
+          </div>
+          <span class="grant-status closed">Closed</span>
+        </div>
+        <div class="grant-pill closed">
+          <div>
+            <div class="grant-name">Canada Greener Homes Loan</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.3);margin-top:2px;">Closed October 1, 2025</div>
+          </div>
+          <span class="grant-status closed">Closed</span>
+        </div>
+
+        <div style="margin-top:20px;padding:14px 16px;background:rgba(255,179,0,.1);border:1px solid rgba(255,179,0,.2);border-radius:8px;">
+          <div style="font-size:12px;color:var(--sun);font-weight:600;line-height:1.6;">We track every program and handle the paperwork — so you never have to figure this out alone.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESIDENTIAL ────────────────────────────────── -->
+<section id="residential">
+  <div class="container">
+    <div class="section-tag">Residential Solar</div>
+    <h2>Your Home,<br><em>Running on Sunshine.</em></h2>
+    <p class="section-intro">We design, install, and finance residential solar systems in Lethbridge and southern Alberta. You own the panels, the credits, and the savings — we handle everything in between.</p>
+    <div class="service-grid">
+      <div class="service-content fade-up">
+        <div class="service-benefits">
+          <div class="benefit">
+            <div class="benefit-dot"></div>
+            <div class="benefit-body">
+              <div class="benefit-title">Custom system design for your property</div>
+              <div class="benefit-desc">Roof angle, orientation, shading, and Lethbridge's specific irradiance all factor into your layout. No generic packages.</div>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-dot"></div>
+            <div class="benefit-body">
+              <div class="benefit-title">$0 upfront with CEIP financing</div>
+              <div class="benefit-desc">The Clean Energy Improvement Program lets Lethbridge homeowners finance 100% of their solar system through their property tax bill — no credit bureau check, low fixed interest, and the debt stays with the house if you sell.</div>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-dot"></div>
+            <div class="benefit-body">
+              <div class="benefit-title">Net metering set up from day one</div>
+              <div class="benefit-desc">We handle your micro-generation agreement with your retailer so excess power exports to the grid and earns you bill credits automatically.</div>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-dot"></div>
+            <div class="benefit-body">
+              <div class="benefit-title">Battery storage &amp; EV charger add-ons</div>
+              <div class="benefit-desc">Extend your independence with a home battery or add a Level 2 EV charger to your install for maximum energy savings.</div>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-dot"></div>
+            <div class="benefit-body">
+              <div class="benefit-title">Full post-install support included</div>
+              <div class="benefit-desc">Monitoring, billing questions, service calls — your dedicated contact doesn't disappear after we leave the roof.</div>
+            </div>
+          </div>
+        </div>
+        <a href="#quote" class="btn btn-dark" style="margin-top:32px;" onclick="track('cta_click',{location:'residential'})">Get My Residential Quote →</a>
+      </div>
+      <div class="fade-up">
+        <div class="grants-box">
+          <div class="grants-box-title">Available Residential Incentives</div>
+          <div class="grant-row">
+            <div class="grant-row-icon">🏦</div>
+            <div class="grant-row-body">
+              <div class="grant-row-name">CEIP Property Tax Financing</div>
+              <div class="grant-row-desc">Finance up to $50,000 through your Lethbridge property tax bill. Fixed interest rate (3–5%), up to 25-year term, no Equifax credit check. Tied to the property — not you personally. We submit your application.</div>
+              <span class="grant-row-tag tag-green">✓ Open · Lethbridge Eligible</span>
+            </div>
+          </div>
+          <div class="grant-row">
+            <div class="grant-row-icon">⚡</div>
+            <div class="grant-row-body">
+              <div class="grant-row-name">Net Metering Credits</div>
+              <div class="grant-row-desc">Sell excess electricity back to your retailer. ENMAX's Seasonal Solar plan pays up to 30¢/kWh in summer — 3× the standard rate. We set up your micro-generation agreement at install.</div>
+              <span class="grant-row-tag tag-green">✓ Province-wide</span>
+            </div>
+          </div>
+          <div class="grant-row">
+            <div class="grant-row-icon">🌿</div>
+            <div class="grant-row-body">
+              <div class="grant-row-name">Alberta Carbon Offset Credits</div>
+              <div class="grant-row-desc">Your system generates carbon offset credits through the Alberta Emission Offset System. Typically $200–$400/year in additional annual income for a standard residential system.</div>
+              <span class="grant-row-tag tag-blue">Ongoing Income</span>
+            </div>
+          </div>
+          <div class="grant-row">
+            <div class="grant-row-icon">👴</div>
+            <div class="grant-row-body">
+              <div class="grant-row-name">SHARP — Senior Homeowners</div>
+              <div class="grant-row-desc">Alberta's Seniors Home Adaptation and Repair Program offers low-interest home equity loans for energy upgrades. Low-income seniors who don't qualify for the loan may receive a direct grant instead.</div>
+              <span class="grant-row-tag tag-amber">Age 65+ · Income-tested</span>
+            </div>
+          </div>
+          <div class="grant-row">
+            <div class="grant-row-icon">🏡</div>
+            <div class="grant-row-body">
+              <div class="grant-row-name">CMHC Eco Improvement</div>
+              <div class="grant-row-desc">If your mortgage is CMHC-insured, you may qualify for a 25% refund on your mortgage insurance premium after adding solar or other eligible energy upgrades.</div>
+              <span class="grant-row-tag tag-blue">CMHC Mortgages Only</span>
+            </div>
+          </div>
+          <div class="grants-footer">
+            <div class="grants-footer-text">✓ We assess your eligibility for every program above and handle the applications for you — no chaotic email dump, no "good luck figuring it out."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMMERCIAL ─────────────────────────────────── -->
+<section id="commercial">
+  <div class="container">
+    <div class="section-tag">Commercial Solar</div>
+    <h2>Slash Your Operating Costs.<br><em>Earn a Federal Tax Credit.</em></h2>
+    <p class="section-intro">Alberta's deregulated electricity market means rate spikes hit businesses hardest. Solar gives you predictable energy costs — and Canada's 30% Clean Technology ITC makes the numbers work even faster.</p>
+    <div class="commercial-grid">
+      <div class="fade-up">
+        <div class="itc-highlight">
+          <div class="itc-highlight-top">
+            <div class="itc-badge">30%</div>
+            <div>
+              <div class="itc-title">Federal Clean Technology ITC</div>
+              <div class="itc-sub">Canada's largest commercial solar incentive — still open until 2033</div>
+            </div>
+          </div>
+          <div class="itc-desc">Canadian corporations can claim a refundable 30% tax credit on the full capital cost of eligible solar, battery storage, and clean energy equipment. Unlike a deduction, this is a dollar-for-dollar reduction in taxes — and if it exceeds what you owe, the CRA refunds the difference.</div>
+          <div class="itc-calc">
+            <div class="itc-calc-label">Example: $255,000 Commercial System</div>
+            <div class="itc-calc-row"><span>System capital cost</span><span>$255,000</span></div>
+            <div class="itc-calc-row"><span>Federal CT ITC (30%)</span><span style="color:#69F0AE;">−$76,500 refund</span></div>
+            <div class="itc-calc-row"><span>CCA Class 43.2 (Year 1 write-off)</span><span style="color:#69F0AE;">−$178,500 deduction</span></div>
+            <div class="itc-calc-row"><span>Annual energy savings</span><span style="color:#69F0AE;">$18,000–$28,000+</span></div>
+            <div class="itc-calc-row total"><span>Effective net cost after ITC</span><span>~$178,500</span></div>
+          </div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:12px;line-height:1.5;">Talk to your accountant to confirm eligibility. We provide full CRA-ready documentation at project completion.</div>
+        </div>
+        <a href="#quote" class="btn btn-sun" onclick="track('cta_click',{location:'commercial_itc'})">Get My Commercial Quote →</a>
+      </div>
+      <div class="commercial-benefits fade-up">
+        <div class="comm-benefit">
+          <div class="comm-benefit-top">
+            <div class="comm-icon">🏗️</div>
+            <div class="comm-title">CEIP Commercial Financing</div>
+          </div>
+          <div class="comm-desc">Commercial property owners in Lethbridge can access CEIP property-tax financing — the same program as residential, scaled for larger systems. Zero upfront, fixed rate, paid through your tax bill.</div>
+        </div>
+        <div class="comm-benefit">
+          <div class="comm-benefit-top">
+            <div class="comm-icon">📈</div>
+            <div class="comm-title">CCA Class 43.2 — 100% Year-1 Write-off</div>
+          </div>
+          <div class="comm-desc">Solar PV systems are classified under CCA Class 43.2, allowing businesses to fully expense the capital cost in Year 1 through accelerated capital cost allowance — dramatically improving cash flow in your first year.</div>
+        </div>
+        <div class="comm-benefit">
+          <div class="comm-benefit-top">
+            <div class="comm-icon">⚡</div>
+            <div class="comm-title">Net Metering for Businesses</div>
+          </div>
+          <div class="comm-desc">Commercial net metering lets you bank credits during peak production and draw on them year-round, reducing your Alberta pool price exposure and giving you predictable monthly energy costs.</div>
+        </div>
+        <div class="comm-benefit">
+          <div class="comm-benefit-top">
+            <div class="comm-icon">🌿</div>
+            <div class="comm-title">Carbon Credits + ESG Value</div>
+          </div>
+          <div class="comm-desc">Generate and sell Alberta carbon offset credits through the Emission Offset System. Solar also supports ESG reporting goals and can boost property value for commercial real estate.</div>
+        </div>
+        <div class="comm-benefit">
+          <div class="comm-benefit-top">
+            <div class="comm-icon">📋</div>
+            <div class="comm-title">We Handle the Paperwork</div>
+          </div>
+          <div class="comm-desc">CEIP applications, micro-gen permits, utility interconnection, and CRA-ready ITC documentation — all organized and delivered to you at project completion. Your accountant will thank us.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AGRICULTURAL ───────────────────────────────── -->
+<section id="agricultural">
+  <div class="container">
+    <div class="section-tag green">Agricultural Solar</div>
+    <h2>Power Your Operation.<br><em>Not the Grid Company.</em></h2>
+    <p class="section-intro">Irrigation, grain drying, shop power — farm electricity costs are relentless. Solar gives you energy independence and qualifies for the same federal CT ITC available to other Alberta businesses.</p>
+    <div class="ag-grid">
+      <div class="ag-card fade-up">
+        <div class="ag-icon">💧</div>
+        <div class="ag-title">Irrigation Systems</div>
+        <div class="ag-desc">Solar-powered pumps eliminate per-season electricity bills for irrigation. Size the system to your peak demand and let the Alberta sun do the work all growing season.</div>
+        <div class="ag-tag">High ROI</div>
+      </div>
+      <div class="ag-card fade-up">
+        <div class="ag-icon">🌾</div>
+        <div class="ag-title">Grain Drying &amp; Shop Power</div>
+        <div class="ag-desc">Offset the heavy electricity draw of grain dryers and shop equipment. Pair with battery storage for overnight or off-peak operation without grid dependency.</div>
+        <div class="ag-tag">Offset peak costs</div>
+      </div>
+      <div class="ag-card fade-up">
+        <div class="ag-icon">🏚️</div>
+        <div class="ag-title">Acreage &amp; Outbuilding Power</div>
+        <div class="ag-desc">Remote outbuildings, livestock facilities, and acreage properties are ideal solar candidates — especially where grid extension would cost more than the system itself.</div>
+        <div class="ag-tag">Off-grid capable</div>
+      </div>
+      <div class="ag-card fade-up">
+        <div class="ag-icon">🇨🇦</div>
+        <div class="ag-title">30% Federal CT ITC</div>
+        <div class="ag-desc">Farm corporations qualify for Canada's Clean Technology Investment Tax Credit — 30% of the system cost returned as a refundable federal tax credit. We provide the CRA documentation you need to claim it.</div>
+        <div class="ag-tag">Corporations eligible</div>
+      </div>
+      <div class="ag-card fade-up">
+        <div class="ag-icon">🌱</div>
+        <div class="ag-title">Carbon Offset Income</div>
+        <div class="ag-desc">Agricultural solar systems generate Alberta carbon offset credits. We help you understand the aggregation options so you capture this additional annual income stream.</div>
+        <div class="ag-tag">Ongoing income</div>
+      </div>
+      <div class="ag-card fade-up">
+        <div class="ag-icon">🛠️</div>
+        <div class="ag-title">Ground Mount Systems</div>
+        <div class="ag-desc">Have available land? Ground-mounted arrays are often more cost-effective on acreages than rooftop systems, and scale easily as your operation grows. No roof angle limitations.</div>
+        <div class="ag-tag">Scalable</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="#quote" class="btn btn-dark" onclick="track('cta_click',{location:'agricultural'})">Talk to an Ag Solar Specialist →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ───────────────────────────────── -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-tag">Our Process</div>
+    <h2>Five Steps. <em>Zero Surprises.</em></h2>
+    <p class="section-intro">We walk every client through the full process — from first call to your first bill with solar credits. Here's exactly what to expect.</p>
+    <div class="steps fade-up">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Free Consultation</div>
+        <div class="step-desc">We review your bills, property, and goals. We also assess every grant and financing program you qualify for — before you spend a dollar.</div>
+        <div class="step-highlight">Grant Assessment Included</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">System Design &amp; Proposal</div>
+        <div class="step-desc">Custom layout, full savings projection, financing terms, and a clear breakdown of every incentive applied. No surprises on pricing.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Permits &amp; Financing</div>
+        <div class="step-desc">We submit your CEIP application, pull electrical permits, and coordinate your micro-generation agreement with your utility. You sign — we handle the rest.</div>
+        <div class="step-highlight">We Submit CEIP For You</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Professional Installation</div>
+        <div class="step-desc">Licensed Alberta electricians install your system. Electrical inspection completed before we ever energize. No cutting corners on safety code.</div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--sun);color:var(--sky);">5</div>
+        <div class="step-title">Ongoing Support</div>
+        <div class="step-desc">We walk you through your first bill with solar credits, answer monitoring questions, and are available for service calls. Your relationship with us doesn't end at install.</div>
+        <div class="step-highlight" style="color:#B45309;">Support Never Stops</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINANCING ──────────────────────────────────── -->
+<section id="financing">
+  <div class="container">
+    <div class="section-tag">Financing Options</div>
+    <h2>There's a Path <em>For Every Budget.</em></h2>
+    <p class="section-intro">From zero-upfront CEIP property financing to conventional loans — we help you find the right option for your situation and make sure you're not leaving grants on the table.</p>
+    <div class="fin-grid">
+      <div class="fin-card featured fade-up">
+        <div class="fin-icon">🏦</div>
+        <div class="fin-title">CEIP Property Tax Financing</div>
+        <div class="fin-amount">$0 Down · Up to $50K</div>
+        <div class="fin-desc">Alberta's best solar financing option for Lethbridge homeowners and commercial owners. Finance 100% through your property tax bill.</div>
+        <div class="fin-features">
+          <div class="fin-feat">No credit bureau check</div>
+          <div class="fin-feat">Fixed rate 3–5% for up to 25 years</div>
+          <div class="fin-feat">Tied to property — not to you</div>
+          <div class="fin-feat">Stays with home if you sell</div>
+          <div class="fin-feat">We submit the application</div>
+        </div>
+      </div>
+      <div class="fin-card fade-up">
+        <div class="fin-icon">💳</div>
+        <div class="fin-title">SHARP Senior Loan</div>
+        <div class="fin-amount">Low-Interest · Age 65+</div>
+        <div class="fin-desc">Alberta's Seniors Home Adaptation and Repair Program provides low-interest home equity loans for energy upgrades including solar.</div>
+        <div class="fin-features">
+          <div class="fin-feat">Must be 65+ and Alberta homeowner</div>
+          <div class="fin-feat">Low-income seniors may get a grant instead</div>
+          <div class="fin-feat">Covers solar and efficiency upgrades</div>
+          <div class="fin-feat">We assess your eligibility first</div>
+        </div>
+      </div>
+      <div class="fin-card fade-up">
+        <div class="fin-icon">🏠</div>
+        <div class="fin-title">Conventional &amp; HELOC Options</div>
+        <div class="fin-amount">Your Bank or Ours</div>
+        <div class="fin-desc">HELOC, CMHC Eco Improvement premium refund, or bank solar loans. We give you the full picture so you can compare and choose.</div>
+        <div class="fin-features">
+          <div class="fin-feat">CMHC Eco Improvement — 25% premium refund</div>
+          <div class="fin-feat">HELOC at lower mortgage rates</div>
+          <div class="fin-feat">Monthly payment often less than bill savings</div>
+          <div class="fin-feat">Stackable with CEIP and municipal programs</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px 28px;margin-top:32px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+      <div style="font-size:24px;">⚠️</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px;">Programs change — we stay on top of it for you</div>
+        <div style="font-size:13px;color:var(--soft);line-height:1.5;">The Canada Greener Homes Grant closed Feb 2024. The Greener Homes Loan closed Oct 2025. We'll tell you exactly what's available right now — and we're upfront if something has changed. No sending you to dead links.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SAVINGS CALCULATOR ─────────────────────────── -->
+<section id="calculator">
+  <div class="container">
+    <div class="section-tag">Savings Estimator</div>
+    <h2>See Your <em>Numbers.</em></h2>
+    <p class="section-intro">Adjust the sliders to match your property. We'll estimate your system size, annual savings, and payback period — including CEIP financing impact.</p>
+    <div class="calc-wrap">
+      <div class="calc-controls fade-up">
+        <div class="calc-group">
+          <div class="calc-label"><span>Monthly Power Bill</span><span class="calc-val" id="v-bill">$180</span></div>
+          <input type="range" min="60" max="500" value="180" id="s-bill" oninput="calc()" onclick="track('calc_interact',{slider:'bill'})">
+        </div>
+        <div class="calc-group">
+          <div class="calc-label"><span>Home Size (sq ft)</span><span class="calc-val" id="v-sqft">1,800</span></div>
+          <input type="range" min="800" max="5000" value="1800" step="100" id="s-sqft" oninput="calc()" onclick="track('calc_interact',{slider:'sqft'})">
+        </div>
+        <div class="calc-group">
+          <div class="calc-label"><span>Primary Roof Direction</span><span class="calc-val" id="v-dir">South</span></div>
+          <div class="calc-opts" id="opts-dir">
+            <div class="calc-opt active" onclick="setDir(this,'South',1.0)">South</div>
+            <div class="calc-opt" onclick="setDir(this,'East/West',0.82)">East/West</div>
+            <div class="calc-opt" onclick="setDir(this,'Southeast',0.92)">SE / SW</div>
+            <div class="calc-opt" onclick="setDir(this,'North',0.65)">North</div>
+          </div>
+        </div>
+        <div class="calc-group">
+          <div class="calc-label"><span>System Type</span></div>
+          <div class="calc-opts" id="opts-sys">
+            <div class="calc-opt active" onclick="setSys(this,'solar-only',1)">Solar Only</div>
+            <div class="calc-opt" onclick="setSys(this,'solar-battery',1.22)">Solar + Battery</div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-results fade-up">
+        <div class="results-card">
+          <div class="rc-label">YOUR ESTIMATED RESULTS</div>
+          <div class="rc-big" id="rc-savings">$1,872</div>
+          <div class="rc-big-label">Annual electricity savings</div>
+          <div class="rc-rows">
+            <div class="rc-row"><span class="rc-row-label">Monthly bill savings</span><span class="rc-row-val green" id="rc-monthly">$131/mo</span></div>
+            <div class="rc-row"><span class="rc-row-label">Recommended system size</span><span class="rc-row-val" id="rc-size">6.8 kW</span></div>
+            <div class="rc-row"><span class="rc-row-label">Estimated system cost</span><span class="rc-row-val" id="rc-cost">$18,000</span></div>
+            <div class="rc-row"><span class="rc-row-label">Payback period</span><span class="rc-row-val" id="rc-payback">11.5 yrs</span></div>
+            <div class="rc-row"><span class="rc-row-label">25-year net value</span><span class="rc-row-val green" id="rc-25yr">$39,200</span></div>
+            <div class="rc-row"><span class="rc-row-label">+ Carbon credits (est.)</span><span class="rc-row-val green">$200–$400/yr</span></div>
+          </div>
+          <div class="ceip-callout">
+            <div class="ceip-callout-text">💡 With CEIP financing in Lethbridge — $0 upfront. Monthly CEIP payment is typically offset by your savings from day one.</div>
+          </div>
+          <div class="rc-note">Estimates based on Lethbridge avg irradiance (2,400 hrs/yr), 16¢/kWh avg rate, ATCO 3%/yr escalation. Does not include net metering or carbon credits. Actual results vary.</div>
+        </div>
+        <a href="#quote" class="btn btn-sun" style="width:100%;justify-content:center;margin-top:16px;" onclick="track('cta_click',{location:'calculator'})">Get My Exact Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ──────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="section-tag">About Us</div>
+        <h2>Local Team. <em>Full Service.</em> No Excuses.</h2>
+        <p style="font-size:16px;color:var(--mid);line-height:1.7;margin-top:16px;">We started Lethbridge Solar because we saw what happens when companies prioritize the sale over the customer. Panels go up before loans are approved. Customers get a folder of forms and a "good luck." Bills stay confusing for months.</p>
+        <p style="font-size:16px;color:var(--mid);line-height:1.7;margin-top:16px;">We do it differently. Every client gets a dedicated local contact from first call to first solar-credited bill — and beyond.</p>
+        <div class="about-promises">
+          <div class="ap-item">
+            <div class="ap-icon">📋</div>
+            <div class="ap-body">
+              <div class="ap-title">We never install before your financing is confirmed</div>
+              <div class="ap-desc">CEIP approval, loan confirmation, or payment plan — locked in writing before we touch the roof.</div>
+            </div>
+          </div>
+          <div class="ap-item">
+            <div class="ap-icon">🤝</div>
+            <div class="ap-body">
+              <div class="ap-title">One contact from quote to post-install</div>
+              <div class="ap-desc">No call centres, no ticket queues. Your installer is your contact. Real people, real answers.</div>
+            </div>
+          </div>
+          <div class="ap-item">
+            <div class="ap-icon">⚡</div>
+            <div class="ap-body">
+              <div class="ap-title">Licensed Alberta electricians — every job</div>
+              <div class="ap-desc">All work is performed to Alberta Safety Code by electricians holding valid AEC permits. Inspected before energization.</div>
+            </div>
+          </div>
+          <div class="ap-item">
+            <div class="ap-icon">🔧</div>
+            <div class="ap-body">
+              <div class="ap-title">Local service = faster support</div>
+              <div class="ap-desc">We're in Lethbridge. When you need a service call, you get a local tech — not a national 1-800 number routing to a call centre.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"From the first call, they explained exactly what CEIP financing meant for our property and walked us through the micro-generation setup step by step. We knew what was happening at every stage — never felt like we were left to figure it out alone. First credit showed up on our bill exactly when they said it would."</div>
+          <div class="review-author">
+            <div class="review-avatar">MK</div>
+            <div class="review-meta">
+              <div class="review-name">M. Kowalski</div>
+              <div class="review-loc">Lethbridge homeowner · 9.5 kW system</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" style="margin-top:20px;">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"As a farm operation, the 30% federal tax credit was a big deal for us. They helped us understand how to document it for our accountant and handled the CEIP application for the commercial portion. Genuinely impressive service — and the system is performing above projection."</div>
+          <div class="review-author">
+            <div class="review-avatar">TH</div>
+            <div class="review-meta">
+              <div class="review-name">T. Hendricks</div>
+              <div class="review-loc">Agricultural operation · 22 kW ground mount</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOUNDING OFFER ─────────────────────────────── -->
+<section id="founding">
+  <div class="container">
+    <div class="founding-inner">
+      <div class="founding-badge">⚡ Founding Offer</div>
+      <div class="founding-text">
+        <h3>First 10 customers: $500 off + priority install slot</h3>
+        <p>Lock in our founding rate and jump the queue. We're booking spring 2026 installs now.</p>
+      </div>
+      <div class="founding-cta">
+        <a href="#quote" class="btn" style="background:#fff;color:#B45309;font-weight:700;" onclick="track('cta_click',{location:'founding'})">Claim This Offer →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUOTE FORM ─────────────────────────────────── -->
+<section id="quote">
+  <div class="container">
+    <div class="quote-inner">
+      <div class="quote-left fade-up">
+        <h2>Let's Build Your <em>Solar Plan.</em></h2>
+        <p>Tell us a bit about your property and we'll get back to you within 48 hours with a custom savings estimate and a full breakdown of the grants and financing you qualify for.</p>
+        <div class="quote-reassurances">
+          <div class="qr-item">Free, no-obligation quote — no pressure</div>
+          <div class="qr-item">Grant eligibility assessment included</div>
+          <div class="qr-item">Response within 48 hours from a real person</div>
+          <div class="qr-item">We tell you upfront if solar won't work for your property</div>
+          <div class="qr-item">CEIP application prepared on your behalf</div>
+        </div>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:12px;">
+          <a href="tel:+14033594809" style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.9);text-decoration:none;font-size:16px;font-weight:600;" onclick="track('phone_click',{location:'quote_section'})">
+            <span style="width:38px;height:38px;background:rgba(255,179,0,.15);border:1px solid rgba(255,179,0,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">📞</span>
+            (403) 359-4809
+          </a>
+          <a href="mailto:hello@lethbridgesolar.ca" style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.9);text-decoration:none;font-size:16px;font-weight:600;" onclick="track('email_click',{location:'quote_section'})">
+            <span style="width:38px;height:38px;background:rgba(255,179,0,.15);border:1px solid rgba(255,179,0,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">✉️</span>
+            hello@lethbridgesolar.ca
+          </a>
+        </div>
+      </div>
+      <div class="quote-form fade-up">
+        <div id="formWrap">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="f-first" placeholder="Jane" oninput="track('form_interact',{field:'first_name'})">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="f-last" placeholder="Smith" oninput="track('form_interact',{field:'last_name'})">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="f-email" placeholder="jane@example.com" oninput="track('form_interact',{field:'email'})">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="f-phone" placeholder="(403) 555-0100" oninput="track('form_interact',{field:'phone'})">
+          </div>
+          <div class="form-group">
+            <label>Property Type</label>
+            <select id="f-type" onchange="track('form_interact',{field:'property_type',value:this.value})">
+              <option value="">Select type...</option>
+              <option>Residential — Home</option>
+              <option>Commercial — Business</option>
+              <option>Agricultural — Farm / Acreage</option>
+              <option>Multi-family / Condo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Monthly Power Bill (approx.)</label>
+            <select id="f-bill" onchange="track('form_interact',{field:'bill',value:this.value})">
+              <option value="">Select range...</option>
+              <option>Under $100</option>
+              <option>$100 – $200</option>
+              <option>$200 – $350</option>
+              <option>$350 – $500</option>
+              <option>Over $500</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Anything else? (optional)</label>
+            <textarea id="f-msg" rows="3" placeholder="Battery storage interest, specific questions about CEIP, commercial/agricultural specifics..." oninput="track('form_interact',{field:'message'})"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="checkbox-group">
+              <input type="checkbox" id="f-consent">
+              <label for="f-consent">I agree to be contacted by Lethbridge Solar regarding my quote request. We don't spam — ever.</label>
+            </div>
+          </div>
+          <button class="form-submit" onclick="submitForm()" type="button">Get My Free Quote →</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div style="font-size:48px;margin-bottom:16px;">☀️</div>
+          <h3>You're on the list!</h3>
+          <p>We'll be in touch within 48 hours with your custom savings estimate and a full grant eligibility breakdown. Check your email.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-wordmark" style="flex-direction:row;gap:6px;align-items:center;">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;letter-spacing:.06em;">LETHBRIDGE</span>
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--sun);letter-spacing:.18em;">SOLAR</span>
+        </div>
+        <div class="footer-tagline">Residential, commercial, and agricultural solar — built for Lethbridge's world-class sunshine. We handle the grants too.</div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#residential" onclick="track('footer_nav',{link:'residential'})">Residential solar</a>
+        <a href="#commercial" onclick="track('footer_nav',{link:'commercial'})">Commercial solar</a>
+        <a href="#agricultural" onclick="track('footer_nav',{link:'agricultural'})">Agricultural solar</a>
+        <a href="#calculator" onclick="track('footer_nav',{link:'calculator'})">Savings calculator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Grants &amp; Support</h5>
+        <a href="#grants-promise" onclick="track('footer_nav',{link:'grants'})">2026 grants overview</a>
+        <a href="#financing" onclick="track('footer_nav',{link:'financing'})">CEIP financing</a>
+        <a href="#how-it-works" onclick="track('footer_nav',{link:'process'})">Our process</a>
+        <a href="#about" onclick="track('footer_nav',{link:'about'})">About us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:+14033594809" onclick="track('phone_click',{location:'footer'})">(403) 359-4809</a>
+        <a href="mailto:hello@lethbridgesolar.ca" onclick="track('email_click',{location:'footer'})">hello@lethbridgesolar.ca</a>
+        <a href="#">Lethbridge, AB, Canada</a>
+        <a href="#">Serving all of southern Alberta</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Lethbridge Solar Ltd. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── NAV scroll state ───────────────────────────────
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);
+});
+
+// ── Mobile menu ────────────────────────────────────
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ── Hero stars ─────────────────────────────────────
+(function(){
+  var sky=document.getElementById('heroSky');
+  var stars='';
+  for(var i=0;i<80;i++){
+    var x=Math.random()*100,y=Math.random()*60;
+    var s=Math.random()*2+.5,d=Math.random()*4+'s';
+    stars+='<div class="star" style="left:'+x+'%;top:'+y+'%;width:'+s+'px;height:'+s+'px;animation-delay:'+d+'"></div>';
+  }
+  sky.innerHTML=stars+'<div class="cloud" style="width:300px;height:60px;left:60%;top:15%"></div><div class="cloud" style="width:200px;height:40px;left:20%;top:25%"></div>';
+})();
+
+// ── Calculator (Alberta-accurate) ──────────────────
+// Lethbridge: 1,825 peak sun hrs/yr (4.8-5.2 hrs/day × 365)
+// Alberta all-in rate: $0.155/kWh (energy + delivery + admin, ATCO/Fortis AB avg)
+// Fixed delivery charges: ~$38/month
+// System cost: $2.65/W installed (mid-range 2026, solarguide.ca)
+// Performance ratio: 0.80 (inverter, temp derating, wiring losses)
+// Blended savings rate: $0.155/kWh (self-consumption offset + net metering credits)
+// Rate escalation: 3%/yr | 25yr factor: sum(1.03^n, n=0..24) = 36.46
+
+var dirFactor = 1.0, sysFactor = 1.0;
+var RATE       = 0.155;   // $/kWh all-in Alberta avg
+var FIXED_MO   = 38;      // Fixed delivery charges $/month
+var KWH_PER_KW = 1460;    // kWh produced per kWp per year (1825 hrs × 0.80 PR)
+var COST_PER_W = 2.65;    // $/W installed
+var OFFSET     = 0.90;    // Size to offset 90% of consumption
+var BLEND_VAL  = 0.155;   // Effective $/kWh saved
+var KWH_SQFT   = 4.2;     // Avg kWh/sqft/yr for AB homes (electricity only, gas heat)
+var ESC        = 36.46;   // 25-yr escalation factor at 3%/yr
+
+function setDir(el, name, f) {
+  document.getElementById('opts-dir').querySelectorAll('.calc-opt').forEach(function(o){ o.classList.remove('active'); });
+  el.classList.add('active');
+  document.getElementById('v-dir').textContent = name;
+  dirFactor = f;
+  calc();
+}
+function setSys(el, name, f) {
+  document.getElementById('opts-sys').querySelectorAll('.calc-opt').forEach(function(o){ o.classList.remove('active'); });
+  el.classList.add('active');
+  sysFactor = f;
+  calc();
+}
+function fmt(n) {
+  if (n >= 1000) return '$' + (Math.round(n / 100) * 100).toLocaleString();
+  if (n < 0) return '-$' + Math.abs(Math.round(n));
+  return '$' + Math.round(n);
+}
+
+function calc() {
+  var bill = +document.getElementById('s-bill').value;
+  var sqft = +document.getElementById('s-sqft').value;
+  document.getElementById('v-bill').textContent = '$' + bill;
+  document.getElementById('v-sqft').textContent = sqft.toLocaleString();
+
+  // --- System sizing: blend bill-based (70%) + sqft-based (30%) ---
+  // Bill-based: estimate actual consumption from bill minus fixed charges
+  var moKwh_bill  = Math.max(80, (bill - FIXED_MO) / RATE);
+  var annKwh_bill = moKwh_bill * 12;
+  var kw_bill = (annKwh_bill * OFFSET) / (KWH_PER_KW * dirFactor);
+
+  // Sqft-based: cross-check using avg electricity intensity for AB homes
+  var annKwh_sqft = sqft * KWH_SQFT;
+  var kw_sqft = (annKwh_sqft * OFFSET) / (KWH_PER_KW * dirFactor);
+
+  // Blended system size (bill is primary signal, sqft is secondary)
+  var systemKw = Math.round((0.7 * kw_bill + 0.3 * kw_sqft) * 10) / 10;
+  systemKw = Math.max(3.0, systemKw);
+  if (sysFactor > 1) systemKw = Math.round(systemKw * 1.05 * 10) / 10; // battery → slightly larger
+
+  // --- Production & savings ---
+  var annualProd    = systemKw * KWH_PER_KW * dirFactor;
+  var annualSavings = Math.round(annualProd * BLEND_VAL);
+  var monthlySavings = Math.round(annualSavings / 12);
+
+  // --- Cost & financials ---
+  var totalCost = Math.round(systemKw * 1000 * COST_PER_W * sysFactor / 500) * 500;
+  var payback   = Math.round(totalCost / annualSavings * 10) / 10;
+  var net25     = Math.round(annualSavings * ESC - totalCost);
+
+  document.getElementById('rc-savings').textContent  = fmt(annualSavings);
+  document.getElementById('rc-monthly').textContent  = fmt(monthlySavings) + '/mo';
+  document.getElementById('rc-size').textContent     = systemKw + ' kW';
+  document.getElementById('rc-cost').textContent     = fmt(totalCost);
+  document.getElementById('rc-payback').textContent  = payback + ' yrs';
+  document.getElementById('rc-25yr').textContent     = fmt(Math.max(0, net25));
+}
+calc();
+
+// ── Quote form ─────────────────────────────────────
+function submitForm(){
+  var first=document.getElementById('f-first').value.trim();
+  var email=document.getElementById('f-email').value.trim();
+  var consent=document.getElementById('f-consent').checked;
+  if(!first||!email){alert('Please enter your name and email.');return;}
+  if(!consent){alert('Please check the consent box to continue.');return;}
+  track('generate_lead',{form_type:'quote'});
+  track('quote_form_submit',{email_provided:!!email});
+  document.getElementById('formWrap').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+
+// ── Fade-up on scroll ──────────────────────────────
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+
+// ── Section tracking ───────────────────────────────
+var secObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting&&e.target.id)track('section_view',{section:e.target.id});});
+},{threshold:0.3});
+['residential','commercial','agricultural','grants-promise','how-it-works','financing','calculator','about','quote'].forEach(function(id){
+  var el=document.getElementById(id);if(el)secObs.observe(el);
+});
+
+// ── Scroll depth ───────────────────────────────────
+var depthFired={};
+window.addEventListener('scroll',function(){
+  var pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);
+  [25,50,75,90].forEach(function(d){if(pct>=d&&!depthFired[d]){depthFired[d]=true;track('scroll_depth',{percent:d});}});
+});
+
+// ── Time on page ───────────────────────────────────
+var marks=[30,60,120,300];var mIdx=0;
+function checkTime(){if(mIdx<marks.length){setTimeout(function(){track('time_on_page',{seconds:marks[mIdx]});mIdx++;checkTime();},((marks[mIdx]-(mIdx?marks[mIdx-1]:0))*1000));}}
+checkTime();
+</script>
+</body>
+</html>
